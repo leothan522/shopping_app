@@ -10,16 +10,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.view.isVisible
-import com.leothan.shoppingcenter.Dialogs.Dialogs
-import com.leothan.shoppingcenter.apis.ApiRetrofitInterface
-import com.leothan.shoppingcenter.apis.Direcciones
+import com.leothan.shoppingcenter.dialogs.Dialogs
+import com.leothan.shoppingcenter.apis.RetrofitHelper
 import com.leothan.shoppingcenter.databinding.ActivityRecuperarBinding
-import com.leothan.shoppingcenter.dataclass.RespuestaSimple
+import com.leothan.shoppingcenter.model.RespuestaSimple
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class RecuperarActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecuperarBinding
@@ -64,12 +61,12 @@ class RecuperarActivity : AppCompatActivity() {
     }
 
     private fun getRecuperar(email: String) {
-        val retrofitBuilder = Retrofit.Builder()
+        /*val retrofitBuilder = Retrofit.Builder()
             .baseUrl(Direcciones().BASE_URL_ANDROID)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiRetrofitInterface::class.java)
-        val retrofitData = retrofitBuilder.recuperarCLave(email)
+            .create(RetrofitInterface::class.java)*/
+        val retrofitData = RetrofitHelper.getAndroid().recuperarCLave(email)
         retrofitData.enqueue(object : Callback<RespuestaSimple?> {
             override fun onResponse(
                 call: Call<RespuestaSimple?>,

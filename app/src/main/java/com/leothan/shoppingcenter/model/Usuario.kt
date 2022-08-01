@@ -1,4 +1,4 @@
-package com.leothan.shoppingcenter.dataclass
+package com.leothan.shoppingcenter.model
 
 data class Usuario(
     val email: String,

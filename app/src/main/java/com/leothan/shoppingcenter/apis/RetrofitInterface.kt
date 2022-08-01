@@ -1,14 +1,13 @@
 package com.leothan.shoppingcenter.apis
 
-import com.leothan.shoppingcenter.dataclass.RespuestaSimple
-import com.leothan.shoppingcenter.dataclass.Usuario
+import com.leothan.shoppingcenter.model.RespuestaSimple
+import com.leothan.shoppingcenter.model.Usuario
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
-import retrofit2.http.Headers
 import retrofit2.http.POST
 
-interface ApiRetrofitInterface {
+interface RetrofitInterface {
 
     @FormUrlEncoded
     @POST("login.php")

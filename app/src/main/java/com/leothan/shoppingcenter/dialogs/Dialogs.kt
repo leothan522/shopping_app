@@ -1,4 +1,4 @@
-package com.leothan.shoppingcenter.Dialogs
+package com.leothan.shoppingcenter.dialogs
 
 import android.content.Context
 import android.content.Intent

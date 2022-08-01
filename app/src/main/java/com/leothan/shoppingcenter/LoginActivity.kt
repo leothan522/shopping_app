@@ -10,17 +10,14 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.leothan.shoppingcenter.Dialogs.Dialogs
-import com.leothan.shoppingcenter.apis.ApiRetrofitInterface
-import com.leothan.shoppingcenter.apis.Direcciones
+import com.leothan.shoppingcenter.dialogs.Dialogs
+import com.leothan.shoppingcenter.apis.RetrofitHelper
 import com.leothan.shoppingcenter.databinding.ActivityLoginBinding
-import com.leothan.shoppingcenter.dataclass.Usuario
+import com.leothan.shoppingcenter.model.Usuario
 import com.leothan.shoppingcenter.prefs.ShoppingCenterApplication.Companion.prefs
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -113,12 +110,12 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun getLogin(email: String, password: String) {
-        val retrofitBuilder = Retrofit.Builder()
+        /*val retrofitBuilder = Retrofit.Builder()
             .baseUrl(Direcciones().BASE_URL_ANDROID)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiRetrofitInterface::class.java)
-        val retrofitData = retrofitBuilder.login(email, password)
+            .create(RetrofitInterface::class.java)*/
+        val retrofitData = RetrofitHelper.getAndroid().login(email, password)
         retrofitData.enqueue(object : Callback<Usuario?> {
             override fun onResponse(call: Call<Usuario?>, response: Response<Usuario?>) {
                 val resultado = response.body()

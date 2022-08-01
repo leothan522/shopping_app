@@ -4,26 +4,20 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.LogPrinter
 import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
-import com.leothan.shoppingcenter.Dialogs.Dialogs
-import com.leothan.shoppingcenter.apis.ApiRetrofitInterface
-import com.leothan.shoppingcenter.apis.Direcciones
+import com.leothan.shoppingcenter.dialogs.Dialogs
+import com.leothan.shoppingcenter.apis.RetrofitHelper
 import com.leothan.shoppingcenter.databinding.ActivityRegisterBinding
-import com.leothan.shoppingcenter.databinding.DialogNoInternetBinding
-import com.leothan.shoppingcenter.dataclass.Usuario
+import com.leothan.shoppingcenter.model.Usuario
 import com.leothan.shoppingcenter.prefs.ShoppingCenterApplication.Companion.prefs
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -127,12 +121,12 @@ class RegisterActivity : AppCompatActivity() {
         password: String,
         telefono: String
     ) {
-        val retrofitBuilder = Retrofit.Builder()
+        /*val retrofitBuilder = Retrofit.Builder()
             .baseUrl(Direcciones().BASE_URL_ANDROID)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiRetrofitInterface::class.java)
-        val retrofitData = retrofitBuilder.registrarUsuario(
+            .create(RetrofitInterface::class.java)*/
+        val retrofitData = RetrofitHelper.getAndroid().registrarUsuario(
             nombre,
             email,
             telefono,
