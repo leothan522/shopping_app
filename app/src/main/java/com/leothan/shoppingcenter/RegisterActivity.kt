@@ -141,7 +141,7 @@ class RegisterActivity : AppCompatActivity() {
                     prefs.saveEmail(resultado.email)
                     prefs.saveName(resultado.name)
                     prefs.saveTelefono(resultado?.telefono.toString())
-                    val intent= Intent(binding.layoutRegister.btnRegister.context, Main2Activity::class.java)
+                    val intent= Intent(binding.layoutRegister.btnRegister.context, MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     startActivity(intent)
                     finish()

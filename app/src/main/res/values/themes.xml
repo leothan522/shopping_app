@@ -35,5 +35,9 @@
         <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
     </style>
 
+    <style name="Theme.ShoppingCenter.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ShoppingCenter.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 </resources>

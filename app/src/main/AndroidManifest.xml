@@ -19,24 +19,29 @@
         android:theme="@style/Theme.ShoppingCenter"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.ShoppingCenter.NoActionBar" />
+        <activity
             android:name=".RecuperarActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.ShoppingCenter.NoActionBar"/>
+            android:theme="@style/Theme.ShoppingCenter.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
-            android:screenOrientation="portrait"
             android:exported="false"
-            android:theme="@style/Theme.ShoppingCenter.NoActionBar"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ShoppingCenter.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.ShoppingCenter.NoActionBar" />
         <activity
             android:name=".SplashActivity"
-            android:screenOrientation="portrait"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/SplahTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

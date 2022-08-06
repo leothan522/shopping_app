@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
 
     fun initUI(){
         if (prefs.getLogin()){
-            startActivity(Intent(this, Main2Activity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }else{
             startActivity(Intent(this, LoginActivity::class.java))
         }

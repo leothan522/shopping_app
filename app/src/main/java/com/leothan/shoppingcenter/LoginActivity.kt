@@ -126,7 +126,7 @@ class LoginActivity : AppCompatActivity() {
                     prefs.saveEmail(resultado.email)
                     prefs.saveName(resultado.name)
                     prefs.saveTelefono(resultado?.telefono.toString())
-                    startActivity(Intent(binding.layoutLogin.btnLogin.context, Main2Activity::class.java))
+                    startActivity(Intent(binding.layoutLogin.btnLogin.context, MainActivity::class.java))
                     finish()
 
                 }else{
