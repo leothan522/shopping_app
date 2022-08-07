@@ -22,8 +22,16 @@
     <color name="whiteTextColor">#fff</color>
     <color name="loginTextColor">#2661FA</color>
     <color name="loginBkColor">#f0f0f0</color>
+    <!-- Colores del Logo-->
+    <color name="logoVerde">#48b16e</color>
+    <color name="logoAzul">#30a0db</color>
+    <color name="logoAmarillo">#f9b435</color>
+    <color name="logoRojo">#e73c1e</color>
+    <color name="logoFutsia">#e83986</color>
+    <color name="logoMorado">#704b99</color>
 
-    <!--colros for card-->
+
+    <!--color for card-->
     <color name="whiteCardColor">#fff</color>
     <color name="colorTextInputBackground">#F7F7F7</color>
     <color name="textColorHint">#cccccc</color>

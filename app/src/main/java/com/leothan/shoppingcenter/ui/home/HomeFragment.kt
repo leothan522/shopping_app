@@ -3,12 +3,15 @@ package com.leothan.shoppingcenter.ui.home
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation.findNavController
 import com.leothan.shoppingcenter.LoginActivity
+import com.leothan.shoppingcenter.R
 import com.leothan.shoppingcenter.databinding.FragmentHomeBinding
 import com.leothan.shoppingcenter.prefs.ShoppingCenterApplication.Companion.prefs
 
@@ -31,31 +34,23 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        /*val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+        val nombre = binding.layoutHome.tvUser
+        val btnComprar = binding.layoutHome.btnComprar
 
-        val name = binding.tvName
-        val email = binding.tvEmail
-        val telefono = binding.tvtelefono
-        val boton = binding.btnCerrar
         homeViewModel.name.observe(viewLifecycleOwner){
-            name.text = it
-        }
-        homeViewModel.email.observe(viewLifecycleOwner){
-            email.text = it
-        }
-        homeViewModel.telefono.observe(viewLifecycleOwner){
-            telefono.text = it
+            nombre.text = "Hola $it"
         }
 
-        boton.setOnClickListener {
-            cerrar()
+        btnComprar.setOnClickListener {
+            irDestino(R.id.nav_principal)
         }
-
 
         return root
+    }
+
+    private fun irDestino(destino: Int) {
+        val navController = findNavController(requireActivity(), R.id.nav_host_fragment_content_main)
+        navController.navigate(destino)
     }
 
     override fun onDestroyView() {
@@ -63,11 +58,11 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    private fun cerrar(){
+    /*private fun cerrar(){
         prefs.wipe()
         activity?.let {
             it.startActivity(Intent(it, LoginActivity::class.java))
             it.finish()
         }
-    }
+    }*/
 }

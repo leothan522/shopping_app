@@ -57,18 +57,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        /*binding.appBarMain.fab.setOnClickListener { view ->
-            *//*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()*//*
-            *//*val pendingIntent = NavDeepLinkBuilder(this)
-                .setGraph(R.navigation.mobile_navigation)
-                .setDestination(R.id.nav_carrito)
-                .setArguments(null)
-                .createPendingIntent()
-            pendingIntent.send()*//*
-            navController.navigate(R.id.nav_carrito)
-        }*/
-
         //Header
         val viewHeader = navView.getHeaderView(0)
         val header = NavHeaderMainBinding.bind(viewHeader)
