@@ -5,6 +5,7 @@
     <string name="login">Iniciar Sesión</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Contraseña</string>
+    <string name="login_nueva_hint">Nueva Contraseña</string>
     <string name="signup_login_hint">¿Ya tienes una cuenta? Iniciar Sesión</string>
     <string name="login_signup_hint">¿No tienes una cuenta? Registrarse</string>
     <string name="login_name_hint">Nombre</string>

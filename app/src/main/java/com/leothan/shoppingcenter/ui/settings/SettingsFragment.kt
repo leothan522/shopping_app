@@ -23,10 +23,18 @@ class SettingsFragment : Fragment() {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root = binding.root
 
-        val texto = binding.tvPruebaHola
+        val nombre = binding.layoutAjustes.tvNombre
+        val email = binding.layoutAjustes.tvEMail
+        val telefono = binding.layoutAjustes.tvTelefono
 
-        settingsViewModel.prueba.observe(viewLifecycleOwner){
-            texto.text = it
+        settingsViewModel.name.observe(viewLifecycleOwner){
+            nombre.text = it
+        }
+        settingsViewModel.email.observe(viewLifecycleOwner){
+            email.text = it
+        }
+        settingsViewModel.telefono.observe(viewLifecycleOwner){
+            telefono.text = it
         }
 
         return root

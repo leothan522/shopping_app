@@ -5,11 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.settings.SettingsFragment">
 
-    <TextView
-        android:id="@+id/tvPruebaHola"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello"
-        android:gravity="center"/>
+    <include
+        android:id="@+id/layoutAjustes"
+        layout="@layout/layout_ajustes"/>
 
 </FrameLayout>

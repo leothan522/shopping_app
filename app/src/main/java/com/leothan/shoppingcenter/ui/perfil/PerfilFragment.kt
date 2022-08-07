@@ -22,10 +22,22 @@ class PerfilFragment : Fragment() {
         _binding = FragmentPerfilBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        val title = binding.layoutPerfil.tvTitle
+        val nombre = binding.layoutPerfil.tvNombre
+        val email = binding.layoutPerfil.tvEMail
+        val telefono = binding.layoutPerfil.tvtelefono
 
-        val texto = binding.tvPruebaHola
-        perfilViewModel.prueba.observe(viewLifecycleOwner){
-            texto.text = it
+        perfilViewModel.name.observe(viewLifecycleOwner){
+            title.text = it
+            nombre.text = it
+        }
+
+        perfilViewModel.email.observe(viewLifecycleOwner){
+            email.text = it
+        }
+
+        perfilViewModel.telefono.observe(viewLifecycleOwner){
+            telefono.text = it
         }
 
         return root
