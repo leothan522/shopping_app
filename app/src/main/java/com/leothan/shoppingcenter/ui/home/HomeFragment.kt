@@ -1,5 +1,6 @@
 package com.leothan.shoppingcenter.ui.home
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,6 +24,7 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,9 +39,7 @@ class HomeFragment : Fragment() {
         val nombre = binding.layoutHome.tvUser
         val btnComprar = binding.layoutHome.btnComprar
 
-        homeViewModel.name.observe(viewLifecycleOwner){
-            nombre.text = "Hola $it"
-        }
+        nombre.text = "Hola ${prefs.getName()}"
 
         btnComprar.setOnClickListener {
             irDestino(R.id.nav_principal)
@@ -58,11 +58,4 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    /*private fun cerrar(){
-        prefs.wipe()
-        activity?.let {
-            it.startActivity(Intent(it, LoginActivity::class.java))
-            it.finish()
-        }
-    }*/
 }

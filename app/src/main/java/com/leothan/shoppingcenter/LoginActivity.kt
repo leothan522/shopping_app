@@ -66,15 +66,15 @@ class LoginActivity : AppCompatActivity() {
     private fun verLoading(loading: Boolean) {
         if (loading){
             binding.layoutLoading.loading.isVisible = true
-            binding.layoutLogin.etEmail.visibility = View.INVISIBLE
-            binding.layoutLogin.etPassword.visibility = View.INVISIBLE
+            binding.layoutLogin.tiEmail.visibility = View.INVISIBLE
+            binding.layoutLogin.tiPassword.visibility = View.INVISIBLE
             binding.layoutLogin.goRecuperar.visibility = View.INVISIBLE
             binding.layoutLogin.goRegister.visibility = View.INVISIBLE
             binding.layoutLogin.btnLogin.visibility = View.INVISIBLE
         }else{
             binding.layoutLoading.loading.isVisible = false
-            binding.layoutLogin.etEmail.visibility = View.VISIBLE
-            binding.layoutLogin.etPassword.visibility = View.VISIBLE
+            binding.layoutLogin.tiEmail.visibility = View.VISIBLE
+            binding.layoutLogin.tiPassword.visibility = View.VISIBLE
             binding.layoutLogin.goRecuperar.visibility = View.VISIBLE
             binding.layoutLogin.goRegister.visibility = View.VISIBLE
             binding.layoutLogin.btnLogin.visibility = View.VISIBLE
@@ -137,8 +137,8 @@ class LoginActivity : AppCompatActivity() {
                         resultado?.error.toString()
                     )
                     //Toast.makeText(binding.layoutLogin.btnLogin.context, resultado?.message, Toast.LENGTH_LONG).show()
+                    verLoading(false)
                 }
-                verLoading(false)
             }
 
             override fun onFailure(call: Call<Usuario?>, t: Throwable) {

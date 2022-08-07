@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.leothan.shoppingcenter.databinding.FragmentPerfilBinding
+import com.leothan.shoppingcenter.prefs.ShoppingCenterApplication.Companion.prefs
 
 class PerfilFragment : Fragment() {
 
@@ -27,18 +28,10 @@ class PerfilFragment : Fragment() {
         val email = binding.layoutPerfil.tvEMail
         val telefono = binding.layoutPerfil.tvtelefono
 
-        perfilViewModel.name.observe(viewLifecycleOwner){
-            title.text = it
-            nombre.text = it
-        }
-
-        perfilViewModel.email.observe(viewLifecycleOwner){
-            email.text = it
-        }
-
-        perfilViewModel.telefono.observe(viewLifecycleOwner){
-            telefono.text = it
-        }
+        title.text = prefs.getName()
+        nombre.text = prefs.getName()
+        email.text = prefs.getEmail()
+        telefono.text = prefs.getTelefono()
 
         return root
     }

@@ -7,6 +7,6 @@
 
     <include
         android:id="@+id/layoutAjustes"
-        layout="@layout/layout_ajustes"/>
+        layout="@layout/layout_settings"/>
 
 </FrameLayout>

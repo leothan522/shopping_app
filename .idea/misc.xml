@@ -38,6 +38,7 @@
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/content_main.xml" value="0.19010416666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/dialog_email_send.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/dialog_mensaje_error.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/dialog_mensaje_success.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/dialog_no_internet.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/fragment_carrito.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/fragment_categorias.xml" value="0.20416666666666666" />
@@ -52,11 +53,13 @@
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_ajustes.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_home.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_loading.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_loading_main.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_login.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_perfil.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_prueba.xml" value="0.203125" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_recuperar.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/layout_settings.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/loading.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/layout/nav_header_main.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/ShoppingCenter/app/src/main/res/menu/activity_main_bottom.xml" value="0.20416666666666666" />

@@ -29,4 +29,15 @@ interface RetrofitInterface {
     @POST("recuperar.php")
     fun recuperarCLave(@Field("email") email: String) : Call<RespuestaSimple>
 
+    @FormUrlEncoded
+    @POST("update.php")
+    fun actualizarUsuario(
+        @Field("name") name : String,
+        @Field("email") email: String,
+        @Field("telefono") telefono :String,
+        @Field("nuevo_password") actual: String,
+        @Field("password") password: String,
+        @Field("id") id: String,
+    ) : Call<Usuario>
+
 }

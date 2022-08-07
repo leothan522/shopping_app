@@ -48,13 +48,13 @@ class RecuperarActivity : AppCompatActivity() {
     private fun verLoading(loading: Boolean) {
         if (loading){
             binding.layoutLoading.loading.isVisible = true
-            binding.layoutRecuperar.etEmail.visibility = View.INVISIBLE
+            binding.layoutRecuperar.tiEmail.visibility = View.INVISIBLE
             binding.layoutRecuperar.tvText.visibility = View.INVISIBLE
             binding.layoutRecuperar.btnEnviar.visibility = View.INVISIBLE
 
         }else{
             binding.layoutLoading.loading.isVisible = false
-            binding.layoutRecuperar.etEmail.visibility = View.VISIBLE
+            binding.layoutRecuperar.tiEmail.visibility = View.VISIBLE
             binding.layoutRecuperar.tvText.visibility = View.VISIBLE
             binding.layoutRecuperar.btnEnviar.visibility = View.VISIBLE
         }
@@ -87,9 +87,10 @@ class RecuperarActivity : AppCompatActivity() {
                         resultado?.message.toString(),
                         "Email no encontrado"
                     )
+                    verLoading(false)
                     //Toast.makeText(binding.layoutRecuperar.btnEnviar.context, resultado?.message, Toast.LENGTH_LONG).show()
                 }
-                verLoading(false)
+
             }
 
             override fun onFailure(call: Call<RespuestaSimple?>, t: Throwable) {

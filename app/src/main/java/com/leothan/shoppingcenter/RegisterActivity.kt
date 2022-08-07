@@ -154,8 +154,9 @@ class RegisterActivity : AppCompatActivity() {
                         "Email no disponible"
                     )
                     //Toast.makeText(binding.layoutRegister.btnRegister.context, resultado?.message, Toast.LENGTH_LONG).show()
+                    verLoading(false)
                 }
-                verLoading(false)
+
             }
 
             override fun onFailure(call: Call<Usuario?>, t: Throwable) {
@@ -173,20 +174,20 @@ class RegisterActivity : AppCompatActivity() {
     private fun verLoading(loading: Boolean) {
         if (loading){
             binding.layoutLoading.loading.isVisible = true
-            binding.layoutRegister.etEmail.visibility = View.INVISIBLE
-            binding.layoutRegister.etPassword.visibility = View.INVISIBLE
-            binding.layoutRegister.etName.visibility = View.INVISIBLE
-            binding.layoutRegister.etPassword.visibility = View.INVISIBLE
-            binding.layoutRegister.etTelefono.visibility = View.INVISIBLE
+            binding.layoutRegister.tiEmail.visibility = View.INVISIBLE
+            binding.layoutRegister.tiPassword.visibility = View.INVISIBLE
+            binding.layoutRegister.tiName.visibility = View.INVISIBLE
+            binding.layoutRegister.tiPassword.visibility = View.INVISIBLE
+            binding.layoutRegister.tiTelefono.visibility = View.INVISIBLE
             binding.layoutRegister.goLogin.visibility = View.INVISIBLE
             binding.layoutRegister.btnRegister.visibility = View.INVISIBLE
         }else{
             binding.layoutLoading.loading.isVisible = false
-            binding.layoutRegister.etEmail.visibility = View.VISIBLE
-            binding.layoutRegister.etPassword.visibility = View.VISIBLE
-            binding.layoutRegister.etName.visibility = View.VISIBLE
-            binding.layoutRegister.etPassword.visibility = View.VISIBLE
-            binding.layoutRegister.etTelefono.visibility = View.VISIBLE
+            binding.layoutRegister.tiEmail.visibility = View.VISIBLE
+            binding.layoutRegister.tiPassword.visibility = View.VISIBLE
+            binding.layoutRegister.tiName.visibility = View.VISIBLE
+            binding.layoutRegister.tiPassword.visibility = View.VISIBLE
+            binding.layoutRegister.tiTelefono.visibility = View.VISIBLE
             binding.layoutRegister.goLogin.visibility = View.VISIBLE
             binding.layoutRegister.btnRegister.visibility = View.VISIBLE
         }
