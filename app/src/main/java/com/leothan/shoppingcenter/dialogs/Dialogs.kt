@@ -1,5 +1,6 @@
 package com.leothan.shoppingcenter.dialogs
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.View
@@ -24,6 +25,24 @@ class Dialogs {
         val dialogBinding = DialogNoInternetBinding.bind(view)
         dialogBinding.btnNoIntermet.setOnClickListener {
             dialog.dismiss()
+            //Toast.makeText(dialogBinding.btnNoIntermet.context, "funciona boton", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun noInternetMain(context: Context, view: View, activity: Activity){
+        //asignando valores del Alert Dialog
+        val builder = AlertDialog.Builder(context)
+        //pasando la vista al builder
+        builder.setView(view)
+        //creando el alert Dialog
+        val dialog = builder.create()
+        dialog.setCancelable(false)
+        dialog.show()
+        //programamos accion del boton
+        val dialogBinding = DialogNoInternetBinding.bind(view)
+        dialogBinding.btnNoIntermet.setOnClickListener {
+            dialog.dismiss()
+            activity.onBackPressed()
             //Toast.makeText(dialogBinding.btnNoIntermet.context, "funciona boton", Toast.LENGTH_SHORT).show()
         }
     }
