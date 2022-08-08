@@ -142,7 +142,7 @@ class LoginActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Usuario?>, t: Throwable) {
-                Toast.makeText(binding.layoutLogin.btnLogin.context, "Error " + t.toString(), Toast.LENGTH_SHORT).show()
+                //Toast.makeText(binding.layoutLogin.btnLogin.context, "Error " + t.toString(), Toast.LENGTH_SHORT).show()
                 Log.d("LoginActivity", t.toString())
                 verLoading(false)
                 Dialogs().noInternet(

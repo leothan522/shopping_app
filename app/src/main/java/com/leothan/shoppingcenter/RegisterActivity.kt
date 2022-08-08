@@ -160,7 +160,7 @@ class RegisterActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Usuario?>, t: Throwable) {
-                Toast.makeText(binding.layoutRegister.btnRegister.context, "Error " + t.toString(), Toast.LENGTH_SHORT).show()
+                //Toast.makeText(binding.layoutRegister.btnRegister.context, "Error " + t.toString(), Toast.LENGTH_SHORT).show()
                 Log.d("RegisterActivity", t.toString())
                 verLoading(false)
                 Dialogs().noInternet(

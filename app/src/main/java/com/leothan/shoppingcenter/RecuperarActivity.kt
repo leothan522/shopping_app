@@ -94,7 +94,7 @@ class RecuperarActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<RespuestaSimple?>, t: Throwable) {
-                Toast.makeText(binding.layoutRecuperar.btnEnviar.context, "Error " + t.toString(), Toast.LENGTH_SHORT).show()
+                //Toast.makeText(binding.layoutRecuperar.btnEnviar.context, "Error " + t.toString(), Toast.LENGTH_SHORT).show()
                 Log.d("RecuperarActivity", t.toString())
                 verLoading(false)
                 Dialogs().noInternet(
