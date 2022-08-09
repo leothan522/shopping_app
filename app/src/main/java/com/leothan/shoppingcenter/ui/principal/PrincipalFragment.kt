@@ -17,7 +17,6 @@ class PrincipalFragment : Fragment() {
     private var _binding: FragmentPrincipalBinding? = null
     private val binding get() = _binding!!
 
-    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

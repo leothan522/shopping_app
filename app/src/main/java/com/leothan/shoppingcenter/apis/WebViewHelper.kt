@@ -1,5 +1,6 @@
 package com.leothan.shoppingcenter.apis
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.view.KeyEvent
 import android.view.View
@@ -13,7 +14,9 @@ import com.leothan.shoppingcenter.dialogs.Dialogs
 
 object WebViewHelper {
 
+    @SuppressLint("SetJavaScriptEnabled")
     fun webView(webView: WebView, url: String, activity: Activity?, loading: ConstraintLayout){
+        webView.addJavascriptInterface(WebAppInterface(webView.context), "Android")
         webView.loadUrl(url)
         webView.settings.javaScriptEnabled = true
         webView.webViewClient = object : WebViewClient() {
